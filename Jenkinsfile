@@ -13,6 +13,7 @@ pipeline {
     stage('Upload Artifact') {
       steps {
         script {
+          def POM_ARTIFACTID = 'your-artifact-id'
           nexusArtifactUploader artifacts: [[artifactId: "${POM_ARTIFACTID}",
                                              classifier: '',
                                              file: "target/${POM_ARTIFACTID}-${POM_VERSION}.${POM_PACKAGING}",
