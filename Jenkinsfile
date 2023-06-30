@@ -20,9 +20,9 @@ pipeline {
                                              type: "${mavenPom.packaging}"]],
                                 credentialsId: 'NexusID',
                                 groupId: "${mavenPom.groupId}",
-                                nexusUrl: '192.168.35.35:8081',
+                                nexusUrl: 'http://192.168.35.35:8081',
                                 nexusVersion: 'nexus2',
-                                protocol: 'http',
+                                protocol: 'https',
                                 repository: 'biom',
                                 version: "${mavenPom.version}"
         }
