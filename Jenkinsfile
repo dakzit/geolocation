@@ -9,6 +9,18 @@ pipeline {
         sh 'mvn clean install package'
       }
     }
-    // Add more stages as needed
+    
+    stages {
+    stage('Check pwd') {
+      steps {
+        sh 'pwd'
+      }
+    }
+    stages {
+    stage('List Directory') {
+      steps {
+        sh 'ls'
+      }
+    }
   }
 }
