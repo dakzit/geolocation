@@ -10,13 +10,12 @@ pipeline {
       }
     }
     
-    stages {
     stage('Check pwd') {
       steps {
         sh 'pwd'
       }
     }
-    stages {
+    
     stage('List Directory') {
       steps {
         sh 'ls'
