@@ -12,7 +12,7 @@ pipeline {
             agent any
             steps {
                 echo 'build & SonarQube analysis...'
-                withSonarQubeEnv('sonarQube') {
+                withSonarQubeEnv('sonar') {
                     sh 'mvn verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=dakzit_geolocation -X'
                 }
             }
